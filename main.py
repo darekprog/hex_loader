@@ -8,6 +8,13 @@ bin_format_string = '08b'
 
 ih = IntelHex('IPA.hex') # create empty object
 
+
+f = open('./output/hexdump.txt', 'w')
+ih.dump(f)
+f.close()
+
+ih.write_hex_file('./output/out.hex', True) # with or without start address
+
 # sio = StringIO()
 # ih.write_hex_file(sio)
 # hexstr = sio.getvalue()
