@@ -21,11 +21,10 @@ sio.close()
 
 # print(bin_array)
 
-# for elem in bin_array:
-#     print("{:02X}".format(elem))
+# print(''.join([format(int(elem), '02X') for elem in bin_array]))
 
 # print(pydict)
 
 start_address = pydict.pop('start_addr')
-
 print(''.join([format(int(elem), '02X') for elem in pydict.values()]))
+print(start_address)
