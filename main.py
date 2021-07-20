@@ -19,12 +19,13 @@ sio.close()
 
 # print(hexstr)
 
-print(bin_array)
+# print(bin_array)
 
 # for elem in bin_array:
 #     print("{:02X}".format(elem))
 
-print(pydict)
+# print(pydict)
 
-# for  key, elem in pydict.items():
-#     print("{:02X}".format(elem))
+start_address = pydict.pop('start_addr')
+
+print(''.join([format(int(elem), '02X') for elem in pydict.values()]))
